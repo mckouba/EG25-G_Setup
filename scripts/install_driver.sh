@@ -27,7 +27,15 @@ service_ModemManager=ModemManager
 
 # Installations
 echo -e "${YELLOW}Installing kernel headers for Ubuntu${SET}"
-apt install linux-headers-$(uname -r)
+apt install linux-headers-$(uname -r) -y
+
+echo -e "${YELLOW}Installing udhcpc${SET}"
+apt install udhcpc -y
+
+echo -e "${YELLOW}Changing permissions on udhcpc script{$SET}"
+pushd $UDHCPC_DIR
+chmod +x default.script
+popd
 
 # Download resources
 echo -e "${YELLOW}Create and change directory to $INS_DIR ${SET}"
