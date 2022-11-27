@@ -1,6 +1,3 @@
-
-
-
 # EG25-G Setup
 
 This is a doucmentation source for installing drivers for Quectel EG25-G wireless modem.  This has been tested on Linux kernel version 6.0.7, but should work on most others.
