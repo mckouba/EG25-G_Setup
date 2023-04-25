@@ -19,7 +19,7 @@ endif
 endif
 
 default:
-	$(MAKE) ARCH=${ARCH} CROSS_COMPILE=${CROSS_COMPILE} -C $(KDIR) M=$(PWD) modules
+	$(MAKE) ARCH=arm64 CROSS_COMPILE=${CROSS_COMPILE} -C $(KDIR) M=$(PWD) modules
 
 install: default
 	cp $(PWD)/qmi_wwan_q.ko /lib/modules/$(shell uname -r)/kernel/drivers/net/usb/
